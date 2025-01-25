@@ -25,7 +25,7 @@ function createGrid(squaresPerSide) {
       // Incrementally darken the square by increasing its opacity
       const currentOpacity = parseFloat(cell.style.opacity);
       if (currentOpacity < 1) {
-        cell.style.opacity = `${Math.min(currentOpacity + 0.2, 1)}`;
+        cell.style.opacity = `${Math.min(currentOpacity + 0.1, 1)}`;
       }
     });
 
