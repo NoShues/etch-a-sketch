@@ -1,17 +1,27 @@
 /* Container styles */
 #container {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap */
-    width: 256px; /* Total width: 16 divs * 16px each */
-    height: 256px; /* Total height: 16 rows * 16px each */
-    border: 1px solid black; /* Optional border for the container */
-  }
-  
-  /* Child div styles */
-  #container .cell {
-    box-sizing: border-box; /* Include borders in size calculation */
-    border: 1px solid black; /* Black borders for each cell */
-    width: 16px; /* Width of each cell */
-    height: 16px; /* Height of each cell */
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px; /* Fixed total width */
+  height: 960px; /* Fixed total height */
+  border: 1px solid black;
+  margin: 20px auto; /* Center the container */
+}
+
+/* Child div styles */
+#container .cell {
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  background-color: lightgrey; /* Start at black and darken via opacity */
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 0.3s; /* Smooth transitions for darkening */
+}
+
+/* Button styles */
+#resizeButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
